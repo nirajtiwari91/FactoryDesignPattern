@@ -10,28 +10,34 @@ namespace FactoryDesignPattern
     {
         static void Main(string[] args)
         {
-            //Without Factory Design Pattern:
-            Car carobj = new Car();
-            Motorcycle motorcycleobj = new Motorcycle();
-            carobj.sayHello();
-            motorcycleobj.sayHello();
+            //With Factory Design Pattern Optimized Version:
+            VehicleFactory factory = new VehicleFactory();
+
+            IVehicle car = factory.CreateVehicleV1("car"); //Explicit Interface
+            IVehicle motorcycle = factory.CreateVehicleV1("motorcycle");
+
+            car.sayHello();
+            motorcycle.sayHello();
+
             Console.ReadLine();
 
 
             //With Factory Design Pattern:
             //VehicleFactory factory = new VehicleFactory();
-            //IVehicle car = factory.CreateVehicle("car");
+
+            //IVehicle car = factory.CreateVehicle("car"); //explicit interface
             //IVehicle motorcycle = factory.CreateVehicle("motorcycle");
+
             //car.sayHello();
             //motorcycle.sayHello();
+
             //Console.ReadLine();
 
-            //With Factory Design Pattern Optimized Version:
-            //VehicleFactory factory = new VehicleFactory();
-            //IVehicle car = factory.CreateVehicleV1("car");
-            //IVehicle motorcycle = factory.CreateVehicle("motorcycle");
-            //car.sayHello();
-            //motorcycle.sayHello();
+            ////Without Factory Design Pattern:
+            //Car carobj = new Car();
+            //Motorcycle motorcycleobj = new Motorcycle();
+            //carobj.sayHello();
+            //motorcycleobj.sayHello();
             //Console.ReadLine();
         }
     }

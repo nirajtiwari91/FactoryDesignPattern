@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace FactoryDesignPattern
 {
-    public class Motorcycle : IVehicle {
+    public class Motorcycle: IVehicle
+    {
         public void sayHello()
         {
             Console.WriteLine("Hello from Motorcycle!");
